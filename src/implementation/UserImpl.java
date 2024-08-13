@@ -9,10 +9,10 @@ import entities.User;
 public class UserImpl implements IUser{
 
 	Scanner scanner=new Scanner(System.in);
-
+	ArrayList<User> users = new ArrayList<>();
+	
 	@Override
 	public void addUserInList(List<User> myListUsers) {
-		ArrayList<User> users = new ArrayList<>();
 		
 		String choice;
 
@@ -51,5 +51,31 @@ public class UserImpl implements IUser{
 
 	}
 
-	
+	@Override
+	public User findUserByUserName(String name) {
+		for(User u:users) {
+			if(u.getName().equalsIgnoreCase(name)) {
+				return u;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public User findUserById(int age) {
+		for(User u:users) {
+			if(u.getAge()==age) {
+				return u;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public void findUser() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
+
