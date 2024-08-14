@@ -1,7 +1,9 @@
 package implementation;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import entities.User;
@@ -10,7 +12,7 @@ public class UserImpl implements IUser{
 
 	Scanner scanner=new Scanner(System.in);
 	ArrayList<User> users = new ArrayList<>();
-	
+		
 	@Override
 	public void addUserInList(List<User> myListUsers) {
 		
